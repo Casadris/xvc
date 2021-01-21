@@ -1,0 +1,46 @@
+/*!
+ *
+ * Layout SCSS v1.0#150
+ *
+ > Copyright (C) Xelliya, Org - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ *
+ * Proprietary and confidential
+ *
+ */
+
+/*
+	✻ Xelliya `Unit` Styling
+	―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	DOMX :	|
+			.__vial.g6__.gxs12__
+				#
+			|
+
+*/
+
+// ―― » Container
+.__vial {
+    @include flexbox;
+    flex-wrap: wrap; // flex-direction: row;
+    @include flex-direction( row );
+    .__v_fill {
+        @include flex( 1 100%);
+    }
+    &.v_col__ {
+        // flex-direction: column;
+        @include flex-direction( column );
+    }
+}
+.__even {
+    // justify-content: space-evenly;
+    @include justify-content( space-evenly );
+}
+.__center {
+    // justify-content: center;
+    @include justify-content( center );
+}
+.__vcenter {
+    // align-items: center;
+    @include align-items( center );
+}

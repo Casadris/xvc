@@ -1,0 +1,23 @@
+/*
+	✻ Core Xelliya Functional SASS
+	――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	> Copyright (C) Xelliya Systems, Org - All Rights Reserved
+	Unauthorized copying of this file, via any medium is strictly prohibited
+
+	! Proprietary and confidential
+*/
+
+// ―― » Mixins
+@import 'mixins/media-queries';
+@import 'mixins/flexbox';
+@import 'mixins/typography';
+
+// ―― » Core
+@import 'core/var';
+@import 'core/extend';
+@import 'core/normalize';
+
+// ―― » Layout
+@import 'layout/xy-region';
+@import 'layout/xy-unit';
+@import 'layout/xy-vial';

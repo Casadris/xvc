@@ -1,0 +1,34 @@
+/*
+	✻ Responsive Mixins
+		Ex of Use:
+			@include mobile {
+			   // .. Styling
+			}
+	――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+*/
+
+@mixin mobile {
+	@media only screen and ( max-width: #{ $mobile-width } ) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media only screen and ( min-width: #{ $tablet-width } ) and ( max-width: #{ $desktop-width - 1px } ) {
+		@content;
+	}
+}
+
+@mixin desktop {
+    @media only screen and ( min-width: #{ $desktop-width } ) {
+        @content;
+    }
+}
+
+@mixin print {
+	@media print {
+		@content;
+	}
+}
+
+// 🙵 ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠

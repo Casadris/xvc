@@ -1,0 +1,20 @@
+{
+	"name": "xelliya-visual-core",
+	"productName": "Xelliya Visual Core",
+	"version": "1.0.0",
+	"description": "XVC Lib Xell extension",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Xelliya/Visual-Core.git"
+	},
+	"author": "seisyll",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Xelliya/Visual-Core/issues"
+	},
+	"homepage": "https://github.com/Xelliya/Visual-Core#readme"
+}

@@ -1,0 +1,56 @@
+
+@charset "UTF-8";
+
+/*
+	✻ Display
+	――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+*/
+
+%__dblock {
+	display: block;
+}
+
+// ―― » Flex
+%__flexbox {
+	@include flexbox();
+}
+
+%__flex-wrap {
+	@include flex-wrap( wrap );
+}
+
+%__flex-center {
+	@include justify-content( center );
+	@include align-items( center );
+}
+
+%__flex-column {
+	@include flex-direction( column );
+}
+
+%__flex-row {
+	@include flex-direction( row );
+}
+
+/*
+	✻ Common
+	――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+*/
+%__cursor-default {
+	cursor: default;
+}
+
+%__no_select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+%__bg-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+}

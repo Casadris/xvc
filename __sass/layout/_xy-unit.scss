@@ -1,0 +1,34 @@
+/*
+	✻ Xelliya `Unit` Styling
+	―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	DOMX :	|
+			.__unit.u6__.uxs12__
+				#
+			|
+
+*/
+$__xy_unit_bg_clr	: #181824 !default;
+$__xy_unit_txt_clr	: #ecf0f1 !default;
+
+.__unit {
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+	color: $__xy_unit_txt_clr;
+	background-color: $__xy_unit_bg_clr;
+	box-shadow: 0 0 13px 0 rgba( $__xy_unit_bg_clr, .5 );
+	@include flexbox();
+	@include flex-direction( column );
+
+	.__u_header_ {
+		padding: 10px 0px 15px 0;
+		margin-bottom: 5px;
+	}
+
+	.__u_content_ {
+	    padding: 10px;
+		@include flexbox();
+		@include align-items( center );
+	}
+
+}
