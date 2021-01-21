@@ -1,0 +1,35 @@
+
+//- ―― » Include
+include __var
+include inc/__header
+include inc/__footer
+include inc/__js
+
+doctype strict
+html(xmlns='http://www.w3.org/1999/xhtml')
+
+	// ⋯ » Head section
+	head
+		block __header
+			meta(charset='utf-8')
+			meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+			meta(charset='application-name', content='Xelliya')
+			//- meta(http-equiv='X-UA-Compatible', content='IE=8')
+			meta(http-equiv='X-UA-Compatible', content='IE=edge')
+			+__header
+			link(rel='stylesheet', href='ast/css/core.css', type='text/css')
+			//- noscript
+				link(rel='stylesheet', href='ast/css/noscript.css', type='text/css')
+	// ⋱ Head Section
+
+	body(class=__BodyClass ? __BodyClass : '')
+
+		block __content
+
+		block __footer
+			+__footer
+
+			// ⋯ » Javascript section
+			block __js
+				+__js
+			// ⋱ Javascript section
