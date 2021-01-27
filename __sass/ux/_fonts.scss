@@ -1,0 +1,93 @@
+@charset 'UTF-8';
+
+/*
+	✻ Import all font
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+*/
+
+$__xy__font_dir__: '../../ast/fonts/';
+
+/* -- Regular -- */
+@font-face {
+    font-family: 'Comfortaa';
+    src: url($__xy__font_dir__ + 'Comfortaa-Regular.eot');
+    src: url($__xy__font_dir__ + 'Comfortaa-Regular.eot?#iefix') format('embedded-opentype'),
+         url($__xy__font_dir__ + 'Comfortaa-Regular.woff2') format('woff2'),
+         url($__xy__font_dir__ + 'Comfortaa-Regular.woff') format('woff'),
+         url($__xy__font_dir__ + 'Comfortaa-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* -- Light -- */
+@font-face {
+    font-family: 'Comfortaa';
+    src: url($__xy__font_dir__ + 'Comfortaa-Light.eot');
+    src: url($__xy__font_dir__ + 'Comfortaa-Light.eot?#iefix') format('embedded-opentype'),
+         url($__xy__font_dir__ + 'Comfortaa-Light.woff2') format('woff2'),
+         url($__xy__font_dir__ + 'Comfortaa-Light.woff') format('woff'),
+         url($__xy__font_dir__ + 'Comfortaa-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* -- Medium -- */
+@font-face {
+    font-family: 'Comfortaa';
+    src: url($__xy__font_dir__ + 'Comfortaa-Medium.eot');
+    src: url($__xy__font_dir__ + 'Comfortaa-Medium.eot?#iefix') format('embedded-opentype'),
+         url($__xy__font_dir__ + 'Comfortaa-Medium.woff2') format('woff2'),
+         url($__xy__font_dir__ + 'Comfortaa-Medium.woff') format('woff'),
+         url($__xy__font_dir__ + 'Comfortaa-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* -- Semi Bold -- */
+@font-face {
+    font-family: 'Comfortaa';
+    src: url($__xy__font_dir__ + 'Comfortaa-SemiBold.eot');
+    src: url($__xy__font_dir__ + 'Comfortaa-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url($__xy__font_dir__ + 'Comfortaa-SemiBold.woff2') format('woff2'),
+         url($__xy__font_dir__ + 'Comfortaa-SemiBold.woff') format('woff'),
+         url($__xy__font_dir__ + 'Comfortaa-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* -- Bold -- */
+@font-face {
+    font-family: 'Comfortaa';
+    src: url($__xy__font_dir__ + 'Comfortaa-Bold.eot');
+    src: url($__xy__font_dir__ + 'Comfortaa-Bold.eot?#iefix') format('embedded-opentype'),
+         url($__xy__font_dir__ + 'Comfortaa-Bold.woff2') format('woff2'),
+         url($__xy__font_dir__ + 'Comfortaa-Bold.woff') format('woff'),
+         url($__xy__font_dir__ + 'Comfortaa-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+// ―― » Ruthie Font
+@font-face {
+    font-family: 'Ruthie';
+    src: url($__xy__font_dir__ + 'Ruthie-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// ―― » Italianno
+@font-face {
+    font-family: 'Italianno';
+    src: url($__xy__font_dir__ + 'Italianno-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+
+    &.__i_small_ {
+        font-size: 15px;
+    }
+
+}

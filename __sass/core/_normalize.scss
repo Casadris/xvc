@@ -36,12 +36,17 @@ body {
 }
 
 // ―― » Component
+a {
+	text-decoration: none;
+}
+
+
 textarea {
 	min-height: 70px;
 }
 
-button {
-	&:focus {
+button, a {
+	&:hover, &:focus {
 		outline: none;
 	}
 }

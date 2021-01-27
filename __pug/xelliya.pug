@@ -11,13 +11,16 @@ html(xmlns='http://www.w3.org/1999/xhtml')
 	// ⋯ » Head section
 	head
 		block __header
+			base(href=__BaseURL ? __BaseURL : '/')
 			meta(charset='utf-8')
 			meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 			meta(charset='application-name', content='Xelliya')
 			//- meta(http-equiv='X-UA-Compatible', content='IE=8')
 			meta(http-equiv='X-UA-Compatible', content='IE=edge')
 			+__header
+
 			link(rel='stylesheet', href='ast/css/core.css', type='text/css')
+
 			//- noscript
 				link(rel='stylesheet', href='ast/css/noscript.css', type='text/css')
 	// ⋱ Head Section

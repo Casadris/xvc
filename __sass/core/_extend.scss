@@ -2,10 +2,29 @@
 @charset "UTF-8";
 
 /*
-	✻ Display
-	――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	✻ Color
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
 */
+%__c-light {
+	color: var( --c-light, #ecf0f1 );
+}
 
+%__c-primary {
+	color: var( --c-primary, #21f3c3 );
+}
+
+/*
+	✻ Animation
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+*/
+%__transition-default {
+	@include transition( all, 0.27s, ease-in-out );
+}
+
+/*
+	✻ Display
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+*/
 %__dblock {
 	display: block;
 }
@@ -24,6 +43,10 @@
 	@include align-items( center );
 }
 
+%__flex-space-between {
+	@include justify-content( space-between );
+}
+
 %__flex-column {
 	@include flex-direction( column );
 }
@@ -32,15 +55,25 @@
 	@include flex-direction( row );
 }
 
+
 /*
 	✻ Common
-	――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
 */
+%__reset_spacing {
+	padding: 0;
+	margin: 0;
+}
+
 %__cursor-default {
 	cursor: default;
 }
 
-%__no_select {
+%__no-drag {
+	-webkit-user-drag: none;
+			user-drag: none;
+}
+%__no-select {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -53,4 +86,26 @@
 %__bg-cover {
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*
+	✻ Auto
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+*/
+%__width-auto {
+	width: auto;
+}
+
+%__height-auto {
+	height: auto;
+}
+
+%__wh-auto {
+	width: auto;
+	height: auto;
+}
+
+%__margin-auto {
+	margin: auto;
 }

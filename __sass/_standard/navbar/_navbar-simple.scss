@@ -1,0 +1,85 @@
+/*!
+ *
+ * Simple Navbar SCSS v1.0.10
+ *
+ > Copyright (C) Xelliya, Org - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ *
+ * Proprietary and confidential
+ *
+ */
+
+/*
+	✻ Simple Navbar
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	Location: Inside <header> below opening <body>
+	DOMX :	|
+			nav.__nav-simple
+				img(class='__logo', src='ast/pci/logo.png')
+				ul
+					li
+						a(href=__BlankURL) Item
+					li
+						a(href=__BlankURL) Unit
+				button Hello
+			|
+*/
+$__navbar_simple-item_spacing: 20px !default;
+
+header {
+	background-color: var( --c-dark );
+}
+
+.__nav-simple {
+	@extend %__flexbox;
+	@extend %__flex-space-between;
+	@extend %__flex-center;
+	@extend %__margin-auto;
+	@extend %__no-select;
+	text-transform: capitalize;
+	max-width: 90%;
+	padding: 15px 0;
+	font-family: var( --font-family, --font-default );
+	font-size: var( --navbar-font-size, 22px );
+
+	.__logo {
+		max-height: 55px;
+		@extend %__width-auto;
+	}
+
+	ul {
+		@extend %__reset_spacing;
+
+		li {
+			display: inline-block;
+			list-style: none;
+			@extend %__c-light;
+
+			&:not(:first-child) {
+				margin-left: $__navbar_simple-item_spacing;
+			}
+
+			a {
+				@extend %__no-drag;
+				@extend %__transition-default;
+				@extend %__c-light;
+
+				&:hover {
+					@extend %__c-primary;
+
+					&:focus, &:focus-within, &:active {
+						@extend %__c-light;
+					}
+
+				}
+
+				&:focus, &:focus-within, &:active {
+					@extend %__c-light;
+				}
+
+			}
+
+		}
+
+	}
+}

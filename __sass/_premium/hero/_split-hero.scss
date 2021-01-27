@@ -1,0 +1,98 @@
+/*!
+ *
+ * Split-Hero SCSS v1.0.10
+ *
+ > Copyright (C) Xelliya, Org - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ *
+ * Proprietary and confidential
+ *
+ */
+
+/*
+	✻ `Split-Hero` Styling
+	――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	DOMX :	|
+			.__hero-split
+				._hsplit-left
+				._hsplit-right
+				h1._hsplit-content
+					span._hsplit-title Fungi
+					span and the underground secrets
+			|
+*/
+
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// }
+
+$hsplit-left_default_bg : #265758;
+$hsplit-right_default_bg : #29695f;
+
+.__hero-split {
+	// width: 100vw;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	position: relative;
+	// color: #CCC;
+	color: #f6fbff;
+	text-transform: uppercase;
+	letter-spacing: 17.5px;
+
+	._hsplit-left {
+		top: 0;
+		position: absolute;
+		// width: 60%;
+		width: 100%;
+		background-color: $hsplit-left_default_bg;
+		height: 100vh;
+		clip-path: polygon(0 0, 60vw 0, 40vw 100vh, 0 100vh);
+		z-index: 1;
+		background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+		@extend %__bg-cover;
+
+		&.__bgleft_ {
+			background-position: left;
+		}
+		&.__bgright_ {
+			background-position: right;
+		}
+	}
+
+	._hsplit-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		// width: 60%;
+		width: 100%;
+		background-color: $hsplit-right_default_bg;
+		height: 100vh;
+		background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5));
+		@extend %__bg-cover;
+
+		&.__bgleft_ {
+			background-position: left;
+		}
+		&.__bgright_ {
+			background-position: right;
+		}
+	}
+
+	._hsplit-content {
+		z-index: 2;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	._hsplit-title {
+		font-size: 2em;
+		@extend %__dblock;
+		font-weight: 700;
+	}
+
+}

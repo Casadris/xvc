@@ -8,16 +8,27 @@
 */
 
 // ―― » Mixins
+@import 'mixins/transition';
 @import 'mixins/media-queries';
 @import 'mixins/flexbox';
 @import 'mixins/typography';
+@import 'mixins/transform';
 
 // ―― » Core
 @import 'core/var';
 @import 'core/extend';
 @import 'core/normalize';
 
-// ―― » Layout
+// ―― » UX
+@import 'ux/fonts';
+
+// ―― » Grid
 @import 'layout/xy-region';
 @import 'layout/xy-unit';
 @import 'layout/xy-vial';
+
+// ―― » Standard
+@import '_standard/standard-inc';
+
+// ―― » Premium Block
+@import '_premium/premium-inc';
