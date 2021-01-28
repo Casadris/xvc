@@ -13,6 +13,7 @@
 	✻ Simple Navbar
 	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
 	Location: Inside <header> below opening <body>
+	Max-Items: 5/6
 	DOMX :	|
 			nav.__nav-simple
 				img(class='__logo', src='ast/pci/logo.png')
@@ -39,7 +40,6 @@ header {
 	text-transform: capitalize;
 	max-width: 90%;
 	padding: 15px 0;
-	font-family: var( --font-family, --font-default );
 	font-size: var( --navbar-font-size, 22px );
 
 	.__logo {
@@ -49,6 +49,7 @@ header {
 
 	ul {
 		@extend %__reset_spacing;
+		text-align: center;
 
 		li {
 			display: inline-block;

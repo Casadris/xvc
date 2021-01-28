@@ -10,7 +10,7 @@
 		 	transition: $prop $prop_ms $ease $delay;
 }
 
-// ―― »	Manual Multi Properties
+// ―― » Manual Multi Properties
 @mixin transition_multi_2( $prop1, $prop2 ) {
 	-webkit-transition: $prop1, $prop2;
 	   -moz-transition: $prop1, $prop2;
