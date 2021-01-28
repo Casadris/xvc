@@ -1,0 +1,93 @@
+/*!
+ *
+ * Two layer down cover hover button SCSS v1.0.10
+ *
+ > Copyright (C) Xelliya, Org - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ *
+ * Proprietary and confidential
+ *
+ */
+
+/*
+	✻ Two layer down cover hover button
+	――――――――――――――――――――――――――――――――――――――――――――――― 🙠
+	Location: Any
+	DOMX :	|
+			button.__btn-two_layer
+				Content
+			-
+			a.__btn-two_layer
+				Content
+			|
+*/
+$__btn-two_layer-color: var( --c-light, #ecf0f1 ) !default;
+$__btn-two_layer-border_width: 2px !default;
+$__btn-two_layer-padding: 0.5em 2em !default;
+
+%__btn-two_layer_pseudo_default {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 100%;
+	left: 0;
+	z-index: -1;
+	@include transition( transform, 0.3s, cubic-bezier( 0.75, 0, 0.125, 1 ) );
+}
+
+.__btn-two_layer {
+	@extend %__dblock;
+	@extend %__no-drag-select;
+	background: none;
+	color: $__btn-two_layer-color;
+	overflow: hidden;
+	border: $__btn-two_layer-color solid $__btn-two_layer-border_width;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	min-width: 150px;
+	max-width: 250px;
+	padding: $__btn-two_layer-padding;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	@extend %__transition-default;
+
+	&:hover {
+		// color: $__btn-two_layer-color;
+		color: var( --c-dark );
+
+		&:before, &:after {
+			@include transform( translate3d( 0, 100%, 0 ) );
+		}
+
+		&:after {
+			@include transition-delay( 0.175s );
+		}
+
+	}
+
+	&:focus {
+
+		&:after {
+			@extend %__transition-default;
+			@include transition-delay( 0s );
+			opacity: 0.1;
+		}
+
+	}
+
+	&:before {
+		@extend %__btn-two_layer_pseudo_default;
+		background: var( --c-primary );
+		// background: #7986cb;
+	}
+
+	&:after {
+		@extend %__btn-two_layer_pseudo_default;
+		background: var( --c-light );
+		// background: #3f51b5;
+	}
+
+}
